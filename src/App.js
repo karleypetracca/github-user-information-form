@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useState } from "react";
 import Header from "./components/Header.jsx";
-import Card from "./components/Card.jsx";
-import './App.css';
+import Form from "./components/Form.jsx";
+import CardList from "./components/CardList.jsx";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Card />
-    </div>
-  );
-}
+const App = () => {
+	const [cards, setCards] = useState([]); //hook
+
+	const addNewCard = cardInfo => {
+		setCards(cards.concat(cardInfo));
+	};
+
+	return (
+		<>
+			<Header />
+			<div className="App">
+				<Form onSubmit={addNewCard} />
+				<CardList cards={cards} />
+			</div>
+		</>
+	);
+};
 
 export default App;

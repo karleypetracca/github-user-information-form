@@ -1,0 +1,26 @@
+.card {
+	max-height: 200px;
+	width: 300px;
+	margin: 10px;
+	display: flex;
+	align-items: center;
+	text-align: left;
+}
+
+.cardImg {
+	height: 100px;
+	width: 100px;
+}
+
+.cardImg * {
+	height: 100%;
+}
+
+.cardText {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: start;
+	padding: 10px;
+	height: 100px;
+}

@@ -1,14 +1,12 @@
 import React from "react";
-import './Header.css';
+import "./Header.css";
 
 function Header() {
-	return(
+	return (
 		<header className="App-header">
-			<p>
-					GitHub user information form
-			</p>
+			<p>GitHub user information form</p>
 		</header>
-	)
+	);
 }
 
 export default Header;

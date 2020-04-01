@@ -9,7 +9,16 @@ const Card = props => {
 			</div>
 			<div className="cardText">
 				<b>{props.name}</b>
-				<p>{props.blog}</p>
+				<a
+					href={
+						props.blog.toString().slice(0, 4) === "http"
+							? props.blog
+							: "https://" + props.blog
+					}
+					target="_blank"
+				>
+					<p>{props.blog}</p>
+				</a>
 			</div>
 		</div>
 	);

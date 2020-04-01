@@ -16,6 +16,7 @@ const Card = props => {
 							: "https://" + props.blog
 					}
 					target="_blank"
+					rel="noopener noreferrer"
 				>
 					<p>{props.blog}</p>
 				</a>
